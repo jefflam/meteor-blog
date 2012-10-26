@@ -1,0 +1,25 @@
+<head>
+  <title>Jeff Lam Tian Hung</title>
+</head>
+
+<body>
+  {{> content}}
+</body>
+
+<template name="content">
+  {{#if currentPage "blog"}}
+    {{> blog}}
+  {{/if}}
+
+  {{#if currentPage "blog-post"}}
+    {{> blogPost}}
+  {{/if}}
+
+  {{#if currentPage "admin"}}
+    {{> admin}}
+  {{/if}}
+
+  {{#if currentPage "edit-post"}}
+    {{> editPost}}
+  {{/if}}
+</template>

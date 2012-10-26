@@ -1,0 +1,23 @@
+<template name="admin">
+  <div id="admin">
+    <input type="text" id="post-title" placeholder="Enter glorious post title...">
+    <div id="admin-container">
+      <div id="drafts">
+        <h1>DRAFTS</h1>
+        <ul>
+          {{#each drafts}}
+            <li><a href="/edit/{{slug}}" class="draft">{{title}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+      <div id="published">
+        <h1>PUBLISHED</h1>
+        <ul>
+          {{#each published}}
+            <li><a href="/edit/{{slug}}" class="published">{{title}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>

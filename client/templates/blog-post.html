@@ -1,0 +1,24 @@
+<template name="blogPost">
+  <header>
+    <div id="header-wrapper">
+      <div id="header-avatar">
+        <a href="/"><img src="/img/avatar.png"/></a>
+      </div>
+      <h2 id="header-name">Jeff Lam Tian Hung</h2>
+      <div id="header-description">
+        <p>Designer & Marketer at <a href="#">Tiny Post</a>.</p>
+      </div>
+      <div id="header-nav">
+        <a href="/" class="main">Home</a>
+        <a href="/admin" class="admin">Admin</a>
+      </div>
+    </div>
+  </header>  
+  <div id="blog-post">
+    {{#each blogpost}}
+      <h1>{{title}}</h1>
+      <p>{{date}}</p>
+      <p>{{body}}</p>
+    {{/each}}
+  </div>
+</template>
