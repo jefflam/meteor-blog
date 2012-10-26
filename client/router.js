@@ -16,10 +16,15 @@ var Router = Backbone.Router.extend({
     Session.set('page', 'blog-post');
   },
   editpost: function () {
-   Session.set('page', 'edit-post');
-   Template.editPost.rendered = function () {
-     $('textarea').autosize();
-   };
+    Session.set('page', 'edit-post');
+    Template.editPost.rendered = function () {
+      $('textarea').autosize();
+      if ($('input#post-draft').attr('value') === "true") {
+        $('input#post-draft').attr('checked', false);
+      } else {
+        $('input#post-draft').attr('checked', true);
+      }
+    };
   }
 });
 

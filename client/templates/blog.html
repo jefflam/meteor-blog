@@ -17,7 +17,7 @@
   <div id="blog">
     {{#each posts}}
       <h1><a href="/{{slug}}" class="blog-post">{{title}}</a></h1>
-      <p>{{body}}</p>
+      <p>{{#markdown}}{{body}}{{/markdown}}</p>
       <p>{{date}}</p>
       <p>{{draft}}</p>
     {{/each}}

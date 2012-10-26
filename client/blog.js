@@ -41,14 +41,17 @@ Template.admin.events({
         }
       }
       if (Posts.find({slug: postSlug}).fetch().length > 0) {
-        // console.log(postSlug + ' duplicate');
         BlogRouter.navigate('edit/'+postSlug, {trigger: true});
       } else {
-        // console.log(postSlug + ' not duplicate');
+        var currentDate = new Date();
+        var currentDay = currentDate.getDate();
+        var currentMonth = parseInt(currentDate.getMonth(),10) + 1;
+        var currentYear = currentDate.getFullYear();
+        var currentDateFormatted = currentYear + "-" + currentMonth + "-" + currentDay;
         Posts.insert({
           title: postTitle,
           body: "",
-          date: Date(),
+          date: currentDateFormatted,
           draft: true,
           slug: postSlug
         });
@@ -63,10 +66,10 @@ Template.editPost.events({
     var postSlugArray = window.location.pathname.split('/');
     var postSlug = postSlugArray[2];
     var isDraft = null;
-    if ($('input#post-draft').val() === "true") {
-      isDraft = true;
-    } else {
+    if ($('input#post-draft').attr('checked') === "checked") {
       isDraft = false;
+    } else {
+      isDraft = true;
     }
 
     Posts.update({slug: postSlug},
