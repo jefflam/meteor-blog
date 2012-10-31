@@ -24,6 +24,9 @@ Template.editPost.post = function () {
   postSlug = postSlugArray[2];
   return Posts.find({slug: postSlug});
 };
+Template.login.flashMessage = function (type) {
+  return Session.equals('flash', type);
+};
 
 Template.admin.events({
   'keyup input#post-title': function (keypress) {
@@ -94,5 +97,17 @@ Template.editPost.events({
   },
   'click button.cancel': function () {
     BlogRouter.navigate('admin', {trigger: true});
+  }
+});
+
+Template.login.events({
+  'click button.submit': function () {
+    Meteor.loginWithPassword($('input#username').val(), $('input#password').val(), function () {
+      if (Meteor.userId() !== null) {
+        BlogRouter.navigate('admin', {trigger: true});
+      } else {
+        Session.set('flash', 'error');
+      }
+    });
   }
 });

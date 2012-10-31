@@ -1,0 +1,19 @@
+<template name="login">
+  <div id="login">
+    {{#if flashMessage "error"}}
+      <p class="flash">Wrong credentials. Try again.</p>
+    {{/if}}
+    {{#if flashMessage "error-login"}}
+      <p class="flash">Please login to access this page.</p>
+    {{/if}}
+    <label>Username</label>
+    <br>
+    <input type="text" id="username"/>
+    <br><br>
+    <label>Password</label>
+    <br>
+    <input type="password" id="password"/>
+    <br><br>
+    <button class="submit">LOGIN</button>
+  </div>
+</template>
