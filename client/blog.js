@@ -82,5 +82,17 @@ Template.editPost.events({
     });
 
     BlogRouter.navigate('admin', {trigger: true});
+  },
+  'click div#menu-button': function () {
+    if ($('#menu').css('display') === "none") {
+      $('#menu').css('display', 'block');
+      $('#menu-button .circle').css('background-color', '#dddddd');
+    } else {
+      $('#menu').css('display', 'none');
+      $('#menu-button .circle').css('background-color', '#ececec');
+    }
+  },
+  'click button.cancel': function () {
+    BlogRouter.navigate('admin', {trigger: true});
   }
 });

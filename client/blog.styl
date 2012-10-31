@@ -2,7 +2,8 @@ html
   font-family: "helvetica neue", helvetica, arial, sans-serif;
   font-weight: 300;
   h1
-    font-size: 24px;
+    font-family: "Open Sans Condensed", "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 28px;
     font-weight: 400;
   a
     text-decoration: none;
@@ -25,7 +26,7 @@ header
     #header-name
       text-align: center;
       font-size: 16px;
-      font-weight: 500
+      font-weight: 600
     #header-nav
       text-align: center;
     #header-description
@@ -58,6 +59,7 @@ header
   input#post-title:focus
     outline: none;
   input#post-title
+    font-family: "Open Sans Condensed", "helvetica neue", helvetica, arial, sans-serif;
     position: relative;
     left: 20%;
     width: 50%;
@@ -65,7 +67,6 @@ header
     border: none;
     text-align: left;
     resize: none;
-    height: 30px;
   #admin-container
     left: 20%
     position: relative;
@@ -107,23 +108,78 @@ header
   textarea:focus
     outline: none;
   textarea#post-title
+    font-family: "Open Sans Condensed", "helvetica neue", helvetica, arial, sans-serif;
     position: relative;
     width: 540px;
-    font-size: 24px;
+    font-size: 28px;
     border: none;
     text-align: left;
     resize: none;
   textarea#post-body
+    font-family: "Open Sans", "helvetica neue", helvetica, arial, sans-serif;
     position: relative;
     width: 540px;
     min-height: 450px;
     border: none;
     font-size: 18px;
     resize: none;
-  #sidebar
+    font-weight: 300;
+  #menu
+    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100px;
-    background-color: #eeeeee;
+    top: 70px;
+    left: 235px;
+    height: 250px;
+    width: 165px;
+    background-color: #efefef;
+    padding: 13px;
+    font-size: 14px;
+    border-bottom: 2px solid #dddddd;
+    input#post-date, input#post-slug
+      padding: 5px;
+      margin-top: 5px;
+      clear: both;
+      width: 150px;
+      border: none;
+      font-size: 13px;
+    button
+      margin-top: 5px;
+      padding: 4px;
+      width: 160px;
+      font-size: 12px;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      font-weight: 300;
+    button.submit
+      background-color: #009B2D;
+      box-shadow: 0 3px 0 #005919;
+    button.submit:active
+      background-color: #00681e;
+    button.cancel
+      background-color: #CC0000;
+      box-shadow: 0 3px 0 #770000;
+    button.cancel:active
+      background-color: #990000;
+  #menu-button
+    cursor: pointer;
+    opacity: 0.5;
+    .circle
+      border-radius: 50%;
+      width: 29px;
+      height: 29px;
+      background-color: #ececec;
+      position: fixed;
+      top: 27px;
+      left: 400px;
+    .triangle
+      width:0px; 
+      height:0px; 
+      border-left:6px solid transparent;
+      border-right:6px solid transparent;
+      border-top:6px solid #999999;
+      font-size:0px;
+      line-height:0px;
+      position: fixed;
+      top: 40px;
+      left: 408px;

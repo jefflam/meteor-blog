@@ -3,13 +3,24 @@
     {{#each post}}
       <textarea id="post-title" placeholder="Enter glorious post title..." >{{title}}</textarea>
       <textarea id="post-body" placeholder="Enter glorious thoughts and opinions...">{{body}}</textarea>
-      <div id="sidebar">
+      <div id="menu">
         <label>Publish?</label>
         <input type="checkbox" id="post-draft" checked="checked" value="{{draft}}"/>
+        <br><br>
+        <label>Date</label>
         <input type="date" id="post-date" value="{{date}}"/>
+        <br><br>
+        <label>Post URL Slug</label>
         <input type="text" id="post-slug" value="{{slug}}"/>
-        <button class="submit">Save</button>
+        <br><br>
+        <button class="submit">SAVE</button>
+        <br><br>
+        <button class="cancel">CANCEL</button>
       </div>
     {{/each}}
+    <div id="menu-button">
+      <div class="circle"></div>
+      <div class="triangle"></div>
+    </div>
   </div>
 </template>
