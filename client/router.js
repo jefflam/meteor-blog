@@ -4,6 +4,7 @@ var Router = Backbone.Router.extend({
     "":                 "main",
     "admin":            "admin",
     "login":            "login",
+    "logout":           "logout",
     ":slug":            "blogpost",
     "edit/:slug":       "editpost"
   },
@@ -39,6 +40,10 @@ var Router = Backbone.Router.extend({
   },
   login: function () {
     Session.set('page', 'login');
+  },
+  logout: function () {
+    Meteor.logout();
+    BlogRouter.navigate('', {trigger: true});
   }
 });
 
