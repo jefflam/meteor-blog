@@ -1,14 +1,20 @@
 ### Blog done using the Meteor framework
 
 ##Work in progress - TODO:
-- Account/login for blog owner (+done with accounts-password package and auth logic)
-- Markdown Blog Input (+done with showdown package)
 - Markdown Preview 
 - UI for internal interface/admin (+half done, no responsive yet)
 - Header for blog.html (+done, fonts can't be placed in template)
 - Upon server startup, create the admin account automatically
 - Remove insecure package?
 - Potentially add keyboard navigation
+- Markdown has issues with quotes
+- Live preview functionality
+- Posts that are not published should not be accessible/viewed via URLs
+- Create admin account on server run (since I can't create account by client after)
+
+###DONE
+- Account/login for blog owner (+done with accounts-password package and auth logic)
+- Markdown Blog Input (+done with showdown package)
 
 This blog is done up with the design inspiration of Obtvse, which is then inspired by Svbtle.
 

@@ -9,6 +9,5 @@ backbone
 handlebars
 jquery
 stylus
-insecure
 showdown
 accounts-password

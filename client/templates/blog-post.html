@@ -17,8 +17,8 @@
   <div id="blog-post">
     {{#each blogpost}}
       <h1>{{title}}</h1>
-      <p>{{date}}</p>
-      <p>{{body}}</p>
+      <time>{{date}}</time>
+      <p>{{#markdown}}{{body}}{{/markdown}}</p>
     {{/each}}
   </div>
 </template>
